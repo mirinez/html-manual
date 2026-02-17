@@ -166,12 +166,12 @@
       nav a:not(:last-child) {
       margin-right: 10px; /* espacio entre enlaces */
     }
-      <!-- Para que en el telefono los botones se vean con más espacio usamos lo siguiente. -->
-      @media (max-width: 600px) {
-        nav a {
-          padding: 12px 24px;
-          font-size: 1.1rem;
-        }
+    /* para que en la verisón de móvil se vean los botones con espacio y no pegados: */
+    @media (max-width: 600px) {
+      nav a {
+        padding: 12px 24px;
+        font-size: 1.1rem;
+      }
     }
     </style>
   </head>
@@ -366,7 +366,7 @@
               height="240"
              />
             </p>
-            <p class="nota">Video de ejemplo:</p>
+            <p class="nota">Vídeo de ejemplo:</p>
               <video width="320" height="240" controls>
               <source src="example.mp4" type="video/mp4" />
               </video>
@@ -568,6 +568,7 @@
     </footer>
   </body>
 </html>
+
 
 
 
