@@ -149,6 +149,11 @@
       margin-bottom: 20px;
      }
 
+      nav {
+      display: flex;
+      gap: 12px;       /* separación entre botones */
+      flex-wrap: wrap; /* que bajen en móvil */
+    }
       nav a {
       text-decoration: none;      /* quita subrayado */
       padding: 10px 18px;         /* espacio interior */
@@ -165,13 +170,6 @@
     }
       nav a:not(:last-child) {
       margin-right: 10px; /* espacio entre enlaces */
-    }
-    /* para que en la verisón de móvil se vean los botones con espacio y no pegados: */
-    @media (max-width: 600px) {
-      nav a {
-        padding: 12px 24px;
-        font-size: 1.1rem;
-      }
     }
     </style>
   </head>
@@ -568,6 +566,7 @@
     </footer>
   </body>
 </html>
+
 
 
 
