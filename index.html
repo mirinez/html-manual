@@ -1,0 +1,513 @@
+<!--
+  ==========================
+  HTML SIMPLE + EXPLICADO
+  ==========================
+  Los comentarios en HTML van así y no se ven en la página, solo en el código. Sirven para explicar o anotar cosas sin que el usuario las vea. 
+-->
+
+<!-- DOCTYPE: indica al navegador que esto es HTML5 -->
+<!doctype html>
+
+<!-- <html>: elemento raíz del documento.
+     lang="es": atributo que indica el idioma principal (ayuda a accesibilidad y SEO). -->
+<html lang="es">
+  <head>
+    <!-- <head>: metadatos (información para navegador/SEO), no contenido visible principal -->
+
+    <!-- ========================================================= -->
+    <!-- META ROBOTS TAGS - CONTROL DE INDEXACIÓN PARA BUSCADORES -->
+    <!-- Estas etiquetas siempre van dentro del <head>             -->
+    <!-- ========================================================= -->
+
+    <!-- Permite indexar la página y seguir sus enlaces (comportamiento por defecto) -->
+    <!-- No es obligatorio añadirlo si quieres indexación normal -->
+     
+    <!-- <meta charset="utf-8">: define la codificación para soportar caracteres como ñ, tildes, etc. -->
+    <meta charset="utf-8" />
+
+    <!-- <meta name="viewport"...>: hace que el diseño se adapte bien a móviles (responsive). -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Evita que la página aparezca en resultados de búsqueda -->
+    <!-- Útil para páginas privadas, login, admin, staging -->
+    <!-- <meta name="robots" content="noindex"> -->
+
+    <!-- Evita que los enlaces de la página transmitan autoridad SEO -->
+    <!-- No suele recomendarse usarlo globalmente -->
+    <!-- <meta name="robots" content="nofollow"> -->
+
+    <!-- Bloquea completamente la indexación y el seguimiento de enlaces -->
+    <!-- Equivale a: noindex, nofollow -->
+    <!-- <meta name="robots" content="none"> -->
+
+    <!-- Impide que las imágenes de esta página sean indexadas -->
+    <!-- <meta name="robots" content="noimageindex"> -->
+
+    <!-- Evita que Google muestre una copia en caché -->
+    <!-- <meta name="robots" content="noarchive"> -->
+
+    <!-- Evita que se muestre el snippet (descripción) en resultados -->
+    <!-- <meta name="robots" content="nosnippet"> -->
+
+    <!-- Limita la longitud del snippet a 50 caracteres -->
+    <!-- <meta name="robots" content="max-snippet:50"> -->
+
+    <!-- Permite vista previa grande de imágenes (recomendado para SEO moderno) -->
+    <!-- <meta name="robots" content="max-image-preview:large"> -->
+
+    <!-- Directiva específica solo para Google -->
+    <!-- Solo afecta al bot de Google -->
+    <!-- <meta name="googlebot" content="noindex"> -->
+
+    <!-- <title>: texto que aparece en la pestaña del navegador -->
+    <title>HTML simple explicado</title>
+
+    <!-- <link rel="icon"...>: define el favicon (icono de la página) -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- <style>: CSS embebido (estilos). No es obligatorio, pero ayuda a que se vea ordenado. -->
+    <style>
+      body {
+      margin: 0;
+      font-family: system-ui, Arial, sans-serif;
+      line-height: 1.5;
+     }
+
+      main, header, footer {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+     }
+
+      section {
+      border: 1px solid #ddd;
+      padding: 16px;
+      border-radius: 12px;
+      margin-bottom: 16px;
+     }
+
+      h1, h2 {
+      margin: 0 0 8px;
+     }
+
+      code {
+      background: #f3f3f3;
+      padding: 2px 6px;
+      border-radius: 6px;
+     }
+
+      .nota {
+      color: #444;
+      font-size: 0.95rem;
+     }
+
+      label {
+      display: inline-block;
+      margin-top: 8px;
+     }
+
+      input, textarea, select, button {
+      margin-top: 4px;
+     }
+
+      table {
+      border-collapse: collapse;
+      width: 100%;
+     }
+
+      th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+     }
+
+      .ejemplos {
+      text-align: center;
+     }
+    </style>
+  </head>
+
+  <body>
+    <!-- <body>: todo lo que se ve en la página -->
+
+    <!-- Encabezados: h1 es el título principal (usa 1 por página normalmente) -->
+    <header>
+      <h1>HTML simple (con explicación de tags y atributos)</h1>
+      <h1 id="inicio">Inicio de la página</h1>
+      <p class="nota">
+        En HTML, un <strong>elemento</strong> suele ser:
+        <code>&lt;tag atributo="valor"&gt;contenido&lt;/tag&gt;</code>
+        <br />
+        Ejemplo: <code>&lt;a href="https://ejemplo.com"&gt;Ir&lt;/a&gt;</code>
+        <br />
+        El "tag" es el tipo de elemento (a, p, div, etc.), los "atributos" dan información extra (como href para enlaces), y el "contenido" es lo que va entre la etiqueta de apertura y cierre. 
+        Algunos elementos son "vacíos" y no tienen contenido ni etiqueta de cierre (como <code>&lt;br&gt;</code> o <code>&lt;img&gt;</code>).
+        El &lt;code&gt;&lt;/code&gt; es solo para mostrar código dentro del texto, no es parte de HTML en sí.
+      </p>
+    </header>
+
+    <!-- <main>: contenido principal del documento (semántica) -->
+    <main>
+      <section>
+        <h2>1) Texto básico</h2>
+
+        <!-- <p>: párrafo -->
+        <p>
+          Esto es un párrafo. Dentro puedes usar <em>énfasis</em> con <code>&lt;em&gt;</code> y
+          <strong>negrita importante</strong> con <code>&lt;strong&gt;</code>.
+        </p>
+        <p>
+          También hay otros tags para texto:
+          <br />
+          - <code>&lt;small&gt;</code> para texto pequeño
+          <br />
+          - <code>&lt;mark&gt;</code> para resaltar
+          <br />
+          - <code>&lt;del&gt;</code> para texto tachado (eliminado)
+          <br />
+          - <code>&lt;ins&gt;</code> para texto insertado (nuevo)
+        </p>
+
+        <!-- <br>: salto de línea (elemento vacío, no tiene cierre) -->
+        <p>
+          Línea 1<br />
+          Línea 2 (gracias a <code>&lt;br&gt;</code>)
+        </p>
+      </section>
+
+      <section>
+        <h2>2) Enlaces, imágenes, vídeos, audio y botones</h2>
+            <p class="nota">
+              Los links, botones, imágenes, vídeos y audios se explican en la siguiente sección.
+              Aquí tienes un pequeño adelanto:
+            </p>
+            <h3>Imágenes</h3>
+              <ul>
+                <li>
+                  Ejemplo:
+                  <code>&lt;img src="URL" alt="Texto alternativo"&gt;</code>
+                </li>
+                <li>
+                  <code>src</code>: ruta o URL de la imagen.
+                </li>
+                <li>
+                  <code>alt</code>: texto alternativo (accesibilidad y fallback si no carga).
+                </li>
+                <li>
+                  Puedes usar <code>width</code> y <code>height</code>, aunque es mejor controlar el tamaño con CSS.
+                </li>
+              </ul>
+            <h3>Videos</h3>
+              <ul>
+                <li>
+                  Ejemplo:
+                  <code>&lt;video src="URL" controls&gt;</code>
+                </li>
+                <li>
+                  El atributo <code>controls</code> añade controles de reproducción.
+                </li>
+                <li>
+                  También puedes usar <code>&lt;source&gt;</code> dentro del video para ofrecer varias fuentes (mp4, webm, etc.).
+                </li>
+              </ul>
+            <h3>Audio</h3>
+              <ul>
+                <li>
+                  Ejemplo:
+                  <code>&lt;audio src="URL" controls&gt;</code>
+                </li>
+                <li>
+                  Al igual que con video, el atributo <code>controls</code> añade controles de reproducción.
+                </li>
+                <li>
+                  También puedes usar <code>&lt;source&gt;</code> dentro del audio para ofrecer varias fuentes (mp3, ogg, etc.).
+                </li>
+                </ul>
+            <h3>Enlaces</h3>
+              <ul>
+                <li>
+                  Ejemplo:
+                  <code>&lt;a href="URL"&gt;Texto visible&lt;/a&gt;</code>
+                  </li>
+                <li>
+                  <code>href</code>: define el destino.
+                </li>
+                <li>
+                  <code>target="_blank"</code>: abre en nueva pestaña.
+                </li>
+                <li>
+                  Buena práctica: añadir <code>rel="noopener noreferrer"</code> por seguridad.
+                </li>
+                <li>
+                  Enlaces internos:
+                  <code>href="#id"</code> (el elemento destino debe tener ese <code>id</code>).
+                </li>
+              </ul>
+            <h3>Botones</h3>
+              <ul>
+                <li>
+                  <code>&lt;button type="submit"&gt;Enviar&lt;/button&gt;</code> → envía formulario.
+                </li>
+                <li>
+                  <code>type="reset"</code> → limpia campos.
+                </li>
+                <li>
+                  <code>type="button"</code> → botón genérico (requiere JS para acción).
+                </li>
+                <li>
+                  Los botones <code>submit</code> y <code>reset</code> deben estar dentro de un <code>&lt;form&gt;</code>.
+                </li>
+              </ul>
+            <h3>Enlaces internos</h3>
+              <ul>
+                <li>
+                  <code>&lt;button type="submit"&gt;Enviar&lt;/button&gt;</code> → envía formulario.
+                </li>
+                <li>
+                  <code>type="reset"</code> → limpia campos.
+                </li>
+                <li>
+                  <code>type="button"</code> → botón genérico (requiere JS para acción).
+                </li>
+                <li>
+                  Los botones <code>submit</code> y <code>reset</code> deben estar dentro de un <code>&lt;form&gt;</code>.
+                </li>
+              </ul>
+            <h3>Enlaces internos (navegación dentro de la misma página)</h3>
+              <ul>
+                <li>
+                  Para crear un enlace interno se usa el atributo 
+                  <code>href="#id-del-elemento"</code>.
+                </li>
+                <li>
+                  El símbolo <code>#</code> indica que el destino está dentro de la misma página.
+                </li>
+                <li>
+                  El elemento al que quieres ir debe tener un atributo 
+                  <code>id="id-del-elemento"</code>.
+                </li>
+                <li>
+                  Puedes usar un <code>&lt;a&gt;</code> o un 
+                  <code>&lt;button&gt;</code> con JavaScript para lograr el desplazamiento.
+                </li>
+                <li>
+                  Este tipo de enlaces es útil para crear índices, botones de 
+                  "Ir arriba" o navegación en páginas largas.
+                </li>
+              </ul>
+      </section>
+      <section>
+        <div class="ejemplos">
+          <h3>Ejemplos prácticos</h3>
+            <p class="nota">
+              En esta sección se muestran ejemplos de cada uno de estos elementos.
+            </p>
+            <!-- <img>: imagen (elemento vacío)
+             src="...": ruta/URL de la imagen
+             alt="...": texto alternativo (accesibilidad y si no carga la imagen)
+             width/height: tamaño (opcional) -->
+            <!-- <video>: video
+             src="...": ruta/URL del video
+             controls: muestra controles de reproducción -->
+            <!-- <audio>: audio
+             src="...": ruta/URL del audio
+            controls: muestra controles de reproducción -->
+            <p class="nota">
+              Imagen de ejemplo:
+            <br />
+             <img
+              src="example.jpg"
+              alt="Imagen de ejemplo (placeholder)"
+              width="320"
+              height="240"
+             />
+            </p>
+            <p class="nota">
+              Video de ejemplo:
+            <br />
+              <video width="320" height="240" controls>
+              <source src="example.mp4" type="video/mp4" />
+            </p>
+            <p class="nota">
+              Audio de ejemplo:
+            <br />
+              <audio controls>
+               <source src="example.mp3" type="audio/mpeg" />
+              </audio>
+            </p>
+
+            <!-- <a>: enlace
+              href="...": URL destino
+              target="_blank": abre en otra pestaña
+              rel="noopener noreferrer": seguridad cuando usas target _blank -->
+            <p class="nota">
+              Enlace:
+              <a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank" rel="noopener noreferrer">
+              Documentación de HTML (MDN)
+              </a>
+            </p>
+
+            <!-- Botón que lleva al final -->
+            <p class="nota">
+              Link interno de ejemplo:
+              <a href="#final">Ir al final de la página</a>
+            </p>
+            <!-- Botón que lleva al final -->
+            <p class="nota">
+              Botón volver arriba de ejemplo:
+             <button onclick="location.href='#inicio'">Volver arriba</button>
+            </p>
+        </div>
+      </section>
+
+      <section>
+        <h2>3) Listas</h2>
+
+        <!-- <ul>: lista no ordenada (viñetas)
+             <ol>: lista ordenada (numerada)
+             <li>: item de lista -->
+        <h3>Lista con viñetas (ul)</h3>
+        <ul>
+          <li>Elemento A</li>
+          <li>Elemento B</li>
+          <li>Elemento C</li>
+        </ul>
+
+        <h3>Lista numerada (ol)</h3>
+        <ol>
+          <li>Paso 1</li>
+          <li>Paso 2</li>
+          <li>Paso 3</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>4) Contenedores y semántica</h2>
+
+        <!-- <div>: contenedor genérico (sin significado semántico)
+             <span>: contenedor inline (dentro de texto) -->
+        <div class="nota">
+          Esto está dentro de un <code>&lt;div&gt;</code> con atributo <code>class="nota"</code>.
+          Y aquí un <span>span</span> dentro de una frase.
+        </div>
+
+        <!-- Semánticos comunes:
+             <header>, <main>, <section>, <article>, <footer>, <nav>, <aside>
+             Ayudan a accesibilidad y a entender la estructura. -->
+        <p class="nota">
+          Los elementos <strong>semánticos</strong> describen qué es cada bloque (no solo cómo se ve).
+        </p>
+      </section>
+
+      <section>
+        <h2>5) Tabla</h2>
+
+        <!-- <table>: tabla
+             <thead>: encabezado
+             <tbody>: cuerpo
+             <tr>: fila
+             <th>: celda de encabezado
+             <td>: celda normal -->
+        <table>
+          <thead>
+            <tr>
+              <th>Tag</th>
+              <th>Para qué sirve</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>&lt;p&gt;</code></td>
+              <td>Párrafo</td>
+            </tr>
+            <tr>
+              <td><code>&lt;a&gt;</code></td>
+              <td>Enlace</td>
+            </tr>
+            <tr>
+              <td><code>&lt;img&gt;</code></td>
+              <td>Imagen</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>6) Formulario (inputs + atributos)</h2>
+
+        <!-- <form>: formulario
+             action: a dónde se envían los datos (URL)
+             method: GET o POST
+             (Aquí usamos # para no enviar nada de verdad) -->
+        <form action="#" method="post">
+          <!-- <label>: etiqueta para un campo
+               for="id": conecta el label con el input cuyo id coincide -->
+          <label for="nombre">Nombre:</label><br />
+
+          <!-- <input>: campo
+               type="text": texto
+               id: identificador único (para label y JS)
+               name: clave con la que se envía el dato
+               placeholder: texto guía
+               required: obliga a rellenar -->
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            placeholder="Escribe tu nombre"
+            required
+          />
+
+          <br /><br />
+
+          <label for="email">Email:</label><br />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="tu@email.com"
+          />
+
+          <br /><br />
+
+          <label for="rol">Rol:</label><br />
+          <!-- <select>: desplegable -->
+          <select id="rol" name="rol">
+            <option value="frontend">Frontend</option>
+            <option value="backend">Backend</option>
+            <option value="fullstack">Full stack</option>
+          </select>
+
+          <br /><br />
+
+          <label for="mensaje">Mensaje:</label><br />
+          <!-- <textarea>: texto multilínea -->
+          <textarea id="mensaje" name="mensaje" rows="4" cols="30" placeholder="Escribe algo..."></textarea>
+
+          <br /><br />
+
+          <!-- <button>: botón. type="submit" envía el formulario -->
+          <button type="submit">Enviar</button>
+          <!-- type="reset" reinicia campos -->
+          <button type="reset">Limpiar</button>
+        </form>
+      </section>
+      <section>
+        <h2>7) Favicon (icono de la web)</h2>
+        <p>
+          El favicon es el icono que aparece en la pestaña del navegador. Se define en el <code>&lt;head&gt;</code> con:
+          <code>&lt;link rel="icon" href="favicon.ico" type="image/x-icon"&gt;</code>.
+        </p>
+        <p>
+          El archivo <code>favicon.ico</code> debe estar en la misma carpeta que el HTML o puedes usar una ruta relativa o URL.
+        </p>
+      </section>
+    </main>
+
+    <!-- <footer>: pie de página -->
+    <footer class="nota">
+      <h2 id="final">Final de la página</h2>
+      Hecho con HTML básico. Tip: abre este archivo en el navegador y luego “Ver código fuente”. 😉
+    </footer>
+  </body>
+</html>
