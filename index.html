@@ -166,6 +166,13 @@
       nav a:not(:last-child) {
       margin-right: 10px; /* espacio entre enlaces */
     }
+      <!-- Para que en el telefono los botones se vean con más espacio usamos lo siguiente. -->
+      @media (max-width: 600px) {
+        nav a {
+          padding: 12px 24px;
+          font-size: 1.1rem;
+        }
+    }
     </style>
   </head>
 
@@ -561,6 +568,7 @@
     </footer>
   </body>
 </html>
+
 
 
 
