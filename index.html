@@ -148,6 +148,24 @@
       footer p:last-of-type {
       margin-bottom: 20px;
      }
+
+      nav a {
+      text-decoration: none;      /* quita subrayado */
+      padding: 10px 18px;         /* espacio interior */
+      border-radius: 999px;       /* ultra redondeado */
+      display: inline-block;      /* para que padding funcione bien */
+      background-color: #00873D;/* verde */
+      color: white;
+      font-weight: 500;
+      transition: 0.2s ease;
+    }
+    
+      nav a:hover {
+      background-color: #006c30; /* verde más oscuro al pasar el mouse */
+    }
+      nav a:not(:last-child) {
+      margin-right: 10px; /* espacio entre enlaces */
+    }
     </style>
   </head>
 
@@ -168,11 +186,21 @@
         Algunos elementos son "vacíos" y no tienen contenido ni etiqueta de cierre (como <code>&lt;br&gt;</code> o <code>&lt;img&gt;</code>).
         El &lt;code&gt;&lt;/code&gt; es solo para mostrar código dentro del texto, no es parte de HTML en sí.
       </p>
+      <nav class="nav">
+        <a href="#texto">Texto</a>
+        <a href="#multimedia">Multimedia</a>
+        <a href="#ejemplos">Ejemplos</a>
+        <a href="#listas">Listas</a>
+        <a href="#contenedores">Contenedores</a>
+        <a href="#tablas">Tablas</a>
+        <a href="#form">Formulario</a>
+        <a href="#favicon">Favicon</a>
+      </nav>
     </header>
 
     <!-- <main>: contenido principal del documento (semántica) -->
     <main>
-      <section>
+      <section id="texto">
         <h2>1) Texto básico</h2>
 
         <!-- <p>: párrafo -->
@@ -199,7 +227,7 @@
         </p>
       </section>
 
-      <section>
+      <section id="multimedia">
         <h2>2) Enlaces, imágenes, vídeos, audio y botones</h2>
             <p class="nota">
               Los links, botones, imágenes, vídeos y audios se explican en la siguiente sección.
@@ -282,21 +310,6 @@
                   Los botones <code>submit</code> y <code>reset</code> deben estar dentro de un <code>&lt;form&gt;</code>.
                 </li>
               </ul>
-            <h3>Enlaces internos</h3>
-              <ul>
-                <li>
-                  <code>&lt;button type="submit"&gt;Enviar&lt;/button&gt;</code> → envía formulario.
-                </li>
-                <li>
-                  <code>type="reset"</code> → limpia campos.
-                </li>
-                <li>
-                  <code>type="button"</code> → botón genérico (requiere JS para acción).
-                </li>
-                <li>
-                  Los botones <code>submit</code> y <code>reset</code> deben estar dentro de un <code>&lt;form&gt;</code>.
-                </li>
-              </ul>
             <h3>Enlaces internos (navegación dentro de la misma página)</h3>
               <ul>
                 <li>
@@ -320,7 +333,7 @@
                 </li>
               </ul>
       </section>
-      <section>
+      <section id="ejemplos">
         <div class="ejemplos">
           <h3>Ejemplos prácticos</h3>
             <p class="nota">
@@ -382,7 +395,7 @@
         </div>
       </section>
 
-      <section>
+      <section id="listas">
         <h2>3) Listas</h2>
 
         <!-- <ul>: lista no ordenada (viñetas)
@@ -403,7 +416,7 @@
         </ol>
       </section>
 
-      <section>
+      <section id="contenedores">
         <h2>4) Contenedores y semántica</h2>
 
         <!-- <div>: contenedor genérico (sin significado semántico)
@@ -421,7 +434,7 @@
         </p>
       </section>
 
-      <section>
+      <section id="tablas">
         <h2>5) Tabla</h2>
 
         <!-- <table>: tabla
@@ -454,7 +467,7 @@
         </table>
       </section>
 
-      <section>
+      <section id="formularios">
         <h2>6) Formulario (inputs + atributos)</h2>
 
         <!-- <form>: formulario
@@ -514,7 +527,7 @@
           <button type="reset">Limpiar</button>
         </form>
       </section>
-      <section>
+      <section id="favicon">
         <h2>7) Favicon (icono de la web)</h2>
         <p>
           El favicon es el icono que aparece en la pestaña del navegador. Se define en el <code>&lt;head&gt;</code> con:
