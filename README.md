@@ -1,8 +1,8 @@
-# ✦ HTML Manual Básico – Proyecto de Estudio
+## ✦ HTML Manual Básico – Proyecto de Estudio
 
-## ✧ Sobre este proyecto
+### ✧ Sobre este proyecto
 
-Este archivo HTML es un manual práctico creado para estudiar y entender la estructura básica de HTML.
+_"Este archivo HTML es un manual práctico creado para estudiar y entender la estructura básica de HTML"_
 
 No utiliza frameworks ni JavaScript externo.  
 El objetivo principal es comprender cómo funciona cada etiqueta, cómo se estructura una página y qué significa cada atributo.
@@ -11,7 +11,7 @@ Está pensado como una guía visual y explicativa para repasar los fundamentos d
 
 ---
 
-## ✧ Objetivos de aprendizaje
+### ✧ Objetivos de aprendizaje
 
 Este proyecto sirve para practicar y entender:
 
@@ -28,7 +28,7 @@ Este proyecto sirve para practicar y entender:
 
 ---
 
-## ✧ Qué contiene la página
+### ✧ Qué contiene la página
 
 La página está organizada en secciones claras:
 
@@ -48,14 +48,14 @@ También incluye:
 
 ---
 
-## ✧ Tecnologías usadas
+### ✧ Tecnologías usadas
 
 - HTML5.
 - CSS básico (embebido en el documento).
 
 ---
 
-## ✧ Propósito
+### ✧ Propósito
 
 Este proyecto no busca diseño avanzado ni funcionalidad compleja.
 
@@ -70,6 +70,6 @@ Es un ejercicio de fundamentos, enfocado en comprender la base antes de avanzar 
 
 ---
 
-## ✧ Nota
+### ✧ Nota
 
 Se recomienda abrir el archivo en el navegador y usar “Ver código fuente” o las herramientas de desarrollador (F12) para analizar cómo está construido.
